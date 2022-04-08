@@ -224,6 +224,7 @@ public class Troll extends JavaPlugin implements CommandExecutor, Listener, TabE
                             pages.addContent(new Pages.Item(function.getItem(p), (player, item) -> {
                                 pages.setCloseOnClick(false);
                                 Pages pages2 = new Pages("§b§lSpieler auswählen");
+                                pages2.setCloseOnClick(false);
                                 for (Player p2 : Bukkit.getOnlinePlayers())
                                     if (canOverride(p, p2))
                                         pages2.addContent(new Pages.Item(new ItemBuilder(Material.PLAYER_HEAD).setDisplayName("§a" + p2.getName()).setSkullOwner(p2.getName()).build(), (player1, item1) -> {
